@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlsn:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+ <style type="text/css">
+   			
+			body{
+   				 font-family: "Trebuchet MS", Helvetica, sans-serif;
+   				 background-color: #F5DEB3;
+   				 text-align: center; 
+			}
+
+	 </style>
+</head>
+<body>
+	<table class="table">
+		<thead>
+			<tr>
+				<th scope="col">Codigo</th>
+				<th scope="col">Titulo</th>
+				<th scope="col">Autor</th>
+				<th scope="col">Genero</th>
+				<th scope="col">Resenha</th>
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each = "livro : ${listaDeLivros}">
+				<td th:text="${livro.id}" ></td>
+				<td th:text="${livro.titulo}"></td>
+				<td th:text="${livro.autor}"></td>
+				<td th:text="${livro.genero}"></td>
+				<td th:text="${livro.resenha}"></td>
+				
+			</tr>
+	
+		</tbody>
+	</table>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</body>
+</html>
